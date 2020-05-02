@@ -1,10 +1,12 @@
 import io from 'socket.io-client';
 
+const SOCKETIO_URL = 'https://kevinnio-multiplayer-socketio.herokuapp.com';
+
 let socket;
 
 const Socket = {
   initialize: (position) => {
-    socket = io('http://localhost:3001');
+    socket = io(SOCKETIO_URL);
 
     socket.on('player-entered', data => Socket.onPlayerEntered(data));
     socket.on('player-acknowledged', data => Socket.onPlayerAcknowledged(data));
