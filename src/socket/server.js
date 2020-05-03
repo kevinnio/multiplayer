@@ -19,4 +19,4 @@ io.on('connection', socket => {
   });
 });
 
-server.listen(process.env.SOCKETIO_PORT || 3001);
+server.listen(process.env.PORT || 3001);
