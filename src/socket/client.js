@@ -7,6 +7,7 @@ let socket;
 const Socket = {
   initialize: (position) => {
     socket = io(SOCKETIO_URL);
+    socket.origins('*:*');
 
     socket.on('player-entered', data => Socket.onPlayerEntered(data));
     socket.on('player-acknowledged', data => Socket.onPlayerAcknowledged(data));
