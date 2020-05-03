@@ -1,1 +1,1 @@
-web: npm run socket:start
+web: npm run socket:prod
